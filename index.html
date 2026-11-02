@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishika Jindal | Aspiring Developer & Tech Enthusiast | NST-RU</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Personal portfolio of Ishika Jindal, a first-year Computer Science & AI student at Newton School of Technology - Rishihood University (NST-RU). Exploring Web, App Development, C++, Python, Java, and Machine Learning.">
+  <meta name="keywords" content="Ishika Jindal, NST-RU, Newton School of Technology, Rishihood University, Portfolio, Web Development, App Development, C++, Python, Java, Machine Learning">
+  <meta name="author" content="Ishika Jindal">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ishika Jindal | Portfolio">
+  <meta property="og:description" content="Aspiring Developer | Tech Enthusiast | Creative Thinker @ NST-RU.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/nstru-logo.svg">
+</head>
+<body>
+
+  <!-- Cyber Telemetry Top Bar -->
+  <div class="cyber-hud-bar">
+    <div class="hud-left">
+      <span class="hud-item"><span class="hud-blink-dot"></span> <span class="hud-accent">NODE:</span> NST-RU_CAMPUS</span>
+      <span class="hud-item"><span class="hud-accent">STATUS:</span> ONLINE</span>
+      <span class="hud-item"><span class="hud-accent">STAGE:</span> FIRST_YEAR_CS_AI</span>
+    </div>
+    <div class="hud-right">
+      <span class="hud-item"><span class="hud-accent">TIME:</span> <span id="hud-live-clock">--:--:-- IST</span></span>
+      <span class="hud-item"><span class="hud-accent">STACK:</span> C++ // WEB // ML // PY</span>
+    </div>
+  </div>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION
+       =================================================================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="brand-icon">IJ</div>
+        <div class="brand-title">
+          <span class="brand-name">Ishika Jindal</span>
+          <span class="brand-status">
+            <span class="pulse-dot"></span> NST-RU • CS &amp; AI
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#beyond" class="nav-link">Beyond Tech</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA Action -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Let's Connect</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       HERO SECTION
+       =================================================================== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Intro & Details -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <div class="badge">
+              <span class="pulse-dot"></span>
+              <span>First-Year CS &amp; AI Student @ NST-RU</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <br>
+            <span class="gradient-text">Ishika Jindal</span>
+          </h1>
+
+          <div class="hero-tagline-wrap">
+            <span class="hero-tagline-prefix">&gt;</span>
+            <span id="typewriter-text" class="hero-tagline">Aspiring Developer | Tech Enthusiast | Creative Thinker</span>
+          </div>
+
+          <p class="hero-desc">
+            Passionate first-year engineering student at <strong>Newton School of Technology, Rishihood University (NST-RU)</strong>. 
+            Focused on computer science foundations, clean web architectures, and machine learning pipelines. 
+            Bridging technical precision with creative energy in dancing, singing, and badminton.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Get In Touch</span>
+            </a>
+            <button onclick="copyEmail('ishika.jindal@nst.rishihood.edu.in')" class="btn btn-cyan">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Stats Bar -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-val">NST-RU</span>
+              <span class="stat-label">Institution</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">1st Year</span>
+              <span class="stat-label">Academic Stage</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">6+</span>
+              <span class="stat-label">Core Techs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">3 Arts</span>
+              <span class="stat-label">Dance • Sing • Sport</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Authentic Profile Visual Frame with 3D Tilt & Upload -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-card tilt-card">
+              
+              <!-- Floating Tech Badges -->
+              <div class="tech-pill tech-pill-1">
+                <span>&lt;/&gt; Web &amp; Mobile</span>
+              </div>
+              <div class="tech-pill tech-pill-2">
+                <span>⚡ C++ &amp; Python</span>
+              </div>
+              <div class="tech-pill tech-pill-3">
+                <span>🧠 Machine Learning</span>
+              </div>
+
+              <!-- Main Authentic Frame -->
+              <div class="avatar-frame">
+                <img src="assets/images/avatar-illustration.svg" alt="Ishika Jindal Profile" class="avatar-img" id="hero-avatar">
+                
+                <!-- Live Photo Upload Option -->
+                <div class="avatar-upload-overlay">
+                  <input type="file" id="avatar-file-input" accept="image/*" style="display: none;">
+                  <button type="button" onclick="document.getElementById('avatar-file-input').click()" class="avatar-upload-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <span>Upload Your Photo</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Live Focus Card Indicator -->
+              <div class="card-focus-banner">
+                <div>
+                  <span style="color: var(--text-dim);">Sprint:</span>
+                  <span style="color: #FFFFFF; font-weight: 600;"> DSA &amp; Web Architectures</span>
+                </div>
+                <div style="color: var(--color-cyan); font-weight: 700;">@NST-RU</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       ABOUT ME SECTION
+       =================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Engineering Mindset</span>
+        <h2 class="section-title">Driven by Curiosity, Grounded in Logic</h2>
+        <p class="section-desc">
+          I build software at the intersection of deep curiosity, algorithmic discipline, and creative empathy.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Left: Four Core Pillars -->
+        <div class="about-narrative">
+          <div class="pillar-cards-grid">
+            
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              </div>
+              <h3 class="pillar-title">Unrelenting Curiosity</h3>
+              <p class="pillar-desc">
+                I don't just use frameworks—I love exploring how they work under the hood, from memory allocation in C++ to browser DOM lifecycles.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="pillar-title">Artistic Problem-Solving</h3>
+              <p class="pillar-desc">
+                My background in dancing and singing cultivates rhythm, spatial awareness, and precision—directly elevating how I design fluid interfaces.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <h3 class="pillar-title">Continuous Growth</h3>
+              <p class="pillar-desc">
+                As a first-year student at NST-RU, every single week is a sprint to master new paradigms, algorithms, and applied machine learning tools.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="pillar-title">Structured Execution</h3>
+              <p class="pillar-desc">
+                Whether writing an object-oriented Java model or architecting a responsive web component, I value clarity, modularity, and clean code.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Terminal with Matrix Mode -->
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">ishika@nst-ru: ~/portfolio</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">[CYBER_CLI v1.2]</span>
+          </div>
+          
+          <div class="terminal-body" id="terminal-history">
+            <div class="terminal-line" style="color: var(--color-cyan);">
+              // System connected: Visitor shell initialized.
+            </div>
+            <div class="terminal-line" style="color: var(--text-dim); margin-bottom: 0.75rem;">
+              // Type any command below or click a quick-chip.
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">visitor@ishika-terminal:~$</span> <span class="terminal-cmd">about</span>
+            </div>
+            <div class="terminal-line terminal-output">
+              Ishika Jindal — First-Year CS &amp; AI student at NST-RU.<br>
+              Passionate developer committed to building clean, user-centric software.<br>
+              Combines analytical engineering with creative disciplines (dance &amp; singing).
+            </div>
+          </div>
+
+          <div style="padding: 0 1.25rem 1.25rem;">
+            <!-- Interactive Input -->
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">&gt;</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="type 'help', 'skills', 'matrix', 'education'..." autocomplete="off">
+            </div>
+
+            <!-- Clickable Quick Hint Chips -->
+            <div class="terminal-help-hints">
+              <span>Quick run:</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('skills')">skills</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('projects')">projects</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('matrix')">matrix</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('education')">education</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('hobbies')">hobbies</span>
+              <span class="terminal-hint-chip" onclick="runTerminalCmd('contact')">contact</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       TECHNICAL SKILLS SECTION
+       =================================================================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Core Capabilities</span>
+        <h2 class="section-title">Technical Toolbelt</h2>
+        <p class="section-desc">
+          Core languages and applied domains I am cultivating with hands-on practice, university coursework, and project building.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Skill 1: App Development -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">📱</div>
+            <span class="skill-level-tag">Building</span>
+          </div>
+          <h3 class="skill-name">App Development</h3>
+          <p class="skill-summary">
+            Designing responsive mobile layouts, touch-first interactions, and structured component states. Exploring modern cross-platform paradigms and clean mobile UX.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Mobile UI</span>
+            <span class="skill-tag">State Management</span>
+            <span class="skill-tag">Component Architecture</span>
+            <span class="skill-tag">Cross-Platform</span>
+          </div>
+        </div>
+
+        <!-- Skill 2: Web Development -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">🌐</div>
+            <span class="skill-level-tag">Active Focus</span>
+          </div>
+          <h3 class="skill-name">Web Development</h3>
+          <p class="skill-summary">
+            Architecting modern, accessible web applications. Proficient in semantic HTML5, modern CSS (Grid, Flexbox, Glassmorphism, animations), modern JavaScript (ES6+), and responsive layouts.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5 &amp; CSS3</span>
+            <span class="skill-tag">Modern JavaScript</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">DOM &amp; Web APIs</span>
+          </div>
+        </div>
+
+        <!-- Skill 3: C++ -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">⚙️</div>
+            <span class="skill-level-tag">Core Foundation</span>
+          </div>
+          <h3 class="skill-name">C++</h3>
+          <p class="skill-summary">
+            Honing algorithmic problem-solving, memory understanding, pointers, and data structures (arrays, linked lists, stacks, trees) utilizing the Standard Template Library (STL).
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">OOP &amp; Classes</span>
+            <span class="skill-tag">STL Containers</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+          </div>
+        </div>
+
+        <!-- Skill 4: Python -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">🐍</div>
+            <span class="skill-level-tag">Proficient</span>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-summary">
+            Utilizing Python for algorithmic scripting, data wrangling, automation, and foundational data science. Passionate about Pythonic syntax and rapid prototyping.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Python 3</span>
+            <span class="skill-tag">Pandas &amp; NumPy</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">OOP</span>
+          </div>
+        </div>
+
+        <!-- Skill 5: Java -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">☕</div>
+            <span class="skill-level-tag">Core Foundation</span>
+          </div>
+          <h3 class="skill-name">Java</h3>
+          <p class="skill-summary">
+            Grounding software design in strong Object-Oriented Programming (OOP) paradigms: encapsulation, inheritance, polymorphism, abstract classes, and the Java Collections Framework.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">OOP Architecture</span>
+            <span class="skill-tag">Collections</span>
+            <span class="skill-tag">Exception Handling</span>
+            <span class="skill-tag">File I/O</span>
+          </div>
+        </div>
+
+        <!-- Skill 6: Machine Learning -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon-badge">🧠</div>
+            <span class="skill-level-tag">Exploring</span>
+          </div>
+          <h3 class="skill-name">Machine Learning</h3>
+          <p class="skill-summary">
+            Studying supervised and unsupervised machine learning models, feature engineering, loss optimization, and evaluation metrics (precision, recall, F1) using Scikit-Learn.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Supervised Learning</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">Data Preprocessing</span>
+            <span class="skill-tag">Model Metrics</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       PROJECTS SECTION
+       =================================================================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Featured Works</span>
+        <h2 class="section-title">Projects &amp; Prototypes</h2>
+        <p class="section-desc">
+          Practical applications built to reinforce theoretical fundamentals and solve real problems with high visual fidelity.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="app">App Dev</button>
+        <button class="filter-btn" data-filter="algo">C++ / Algorithms</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="java">Java OOP</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: AuraCraft -->
+        <div class="project-card" data-category="web">
+          <div class="project-banner-wrap">
+            <img src="assets/images/project-web.svg" alt="AuraCraft Web Showcase" class="project-banner">
+            <div class="project-overlay-badge">
+              <span class="badge">Featured Web</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AuraCraft — Interactive Cyber Web Lab</h3>
+            <p class="project-desc">
+              A high-performance modern web showcase demonstrating hardware-accelerated CSS glassmorphism, responsive DOM architecture, and dynamic particle effects.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">Canvas API</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openProjectModal('auracraft')" class="btn btn-primary btn-sm">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+              <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Algoverse -->
+        <div class="project-card" data-category="algo">
+          <div class="project-banner-wrap">
+            <img src="assets/images/project-algo.svg" alt="Algoverse Visualizer Code" class="project-banner">
+            <div class="project-overlay-badge">
+              <span class="badge">C++ Logic</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Algoverse — Algorithm &amp; DSA Visualizer</h3>
+            <p class="project-desc">
+              Interactive visualization suite mapping algorithmic execution steps for QuickSort, MergeSort, and Graph traversals with real code inspections.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">C++ Logic</span>
+              <span class="tech-tag">JavaScript Engine</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">Time Complexity</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openProjectModal('algoverse')" class="btn btn-primary btn-sm">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+              <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: PulseSync -->
+        <div class="project-card" data-category="app">
+          <div class="project-banner-wrap">
+            <img src="assets/images/project-app.svg" alt="PulseSync Mobile App" class="project-banner">
+            <div class="project-overlay-badge">
+              <span class="badge">App Architecture</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">PulseSync — Smart Student Wellness Companion</h3>
+            <p class="project-desc">
+              Cross-platform mobile application interface tracking hydration, active sports habits (badminton &amp; dance), and focused study sprints with local caching.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">App Development</span>
+              <span class="tech-tag">Mobile UI/UX</span>
+              <span class="tech-tag">State Management</span>
+              <span class="tech-tag">Offline Storage</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openProjectModal('pulsesync')" class="btn btn-primary btn-sm">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+              <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: NeuroPredict -->
+        <div class="project-card" data-category="ml">
+          <div class="project-banner-wrap">
+            <img src="assets/images/project-ml.svg" alt="NeuroPredict Machine Learning Code" class="project-banner">
+            <div class="project-overlay-badge">
+              <span class="badge">Machine Learning</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">NeuroPredict — Predictive ML Engine</h3>
+            <p class="project-desc">
+              Supervised classification and feature correlation pipeline built in Python, preprocessing multidimensional data to achieve 94.8% test accuracy.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">Pandas / NumPy</span>
+              <span class="tech-tag">Model Metrics</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openProjectModal('neuropredict')" class="btn btn-primary btn-sm">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+              <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: TaskFlow Pro -->
+        <div class="project-card" data-category="java">
+          <div class="project-banner-wrap">
+            <img src="assets/images/project-java.svg" alt="TaskFlow Pro Java" class="project-banner">
+            <div class="project-overlay-badge">
+              <span class="badge">Java OOP</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TaskFlow Pro — OOP Workspace Engine</h3>
+            <p class="project-desc">
+              Modular desktop workspace manager built on clean Object-Oriented principles, using the Java Collections Framework and serialized file streams.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Java 17</span>
+              <span class="tech-tag">OOP Architecture</span>
+              <span class="tech-tag">Collections Framework</span>
+              <span class="tech-tag">File Serialization</span>
+            </div>
+            <div class="project-actions">
+              <button onclick="openProjectModal('taskflow')" class="btn btn-primary btn-sm">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+              <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDUCATION SECTION (NST-RU)
+       =================================================================== -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Academic Foundation</span>
+        <h2 class="section-title">Education &amp; Training</h2>
+        <p class="section-desc">
+          Immersed in modern computer science, practical programming labs, and applied artificial intelligence coursework.
+        </p>
+      </div>
+
+      <div class="education-container">
+        <div class="edu-card">
+          <!-- Logo Emblem -->
+          <div class="edu-emblem-wrap">
+            <svg viewBox="0 0 100 100" class="edu-emblem-svg">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#55E6E0" stroke-width="2.5" stroke-dasharray="10 6"/>
+              <ellipse cx="50" cy="50" rx="35" ry="14" fill="none" stroke="#B56CFF" stroke-width="2" transform="rotate(-30 50 50)"/>
+              <ellipse cx="50" cy="50" rx="35" ry="14" fill="none" stroke="#398BFF" stroke-width="2" transform="rotate(30 50 50)"/>
+              <circle cx="50" cy="50" r="7" fill="#FFFFFF"/>
+            </svg>
+          </div>
+
+          <!-- Content Details -->
+          <div class="edu-details">
+            <div class="edu-header-row">
+              <div>
+                <h3 class="edu-degree">B.Tech in Computer Science &amp; Artificial Intelligence</h3>
+                <div class="edu-school">Newton School of Technology — Rishihood University (NST-RU)</div>
+              </div>
+              <span class="edu-period-badge">First Year • Present</span>
+            </div>
+
+            <p class="edu-description">
+              Engaged in an intensive, industry-aligned engineering curriculum focused on modern computer science fundamentals, practical programming paradigms, computational mathematics, and applied technology systems.
+            </p>
+
+            <div class="edu-highlights-grid">
+              <div class="edu-highlight-box">
+                <div class="highlight-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <span>Core Coursework</span>
+                </div>
+                <div class="highlight-box-content">
+                  Data Structures &amp; Algorithms, Object-Oriented Programming (C++, Java, Python), Web Technologies, Discrete Mathematics, and AI Foundations.
+                </div>
+              </div>
+
+              <div class="edu-highlight-box">
+                <div class="highlight-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>Campus Community</span>
+                </div>
+                <div class="highlight-box-content">
+                  Active participant in competitive coding challenges, project buildathons, technical discussions, and cultural showcases across the NST-RU community.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       BEYOND TECHNOLOGY (DANCING, SINGING, BADMINTON)
+       =================================================================== -->
+  <section id="beyond" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Holistic Balance</span>
+        <h2 class="section-title">Beyond Technology</h2>
+        <p class="section-desc">
+          Rhythm, musical harmony, and athletic agility directly inform how I think, solve problems, and engineer software.
+        </p>
+      </div>
+
+      <p class="beyond-intro-text">
+        "Choreography teaches spatial transitions, pitch cultivates debugging precision, and athletics sharpens rapid decision-making."
+      </p>
+
+      <div class="hobbies-grid">
+        
+        <!-- Hobby 1: Dancing -->
+        <div class="hobby-card dance">
+          <div class="hobby-media-wrap">
+            <img src="assets/images/hobby-dance.svg" alt="Dance Choreography Structure" class="hobby-svg">
+          </div>
+          <div class="hobby-body">
+            <span class="hobby-tag-badge">
+              <span class="pulse-dot" style="background: #E58CFF; box-shadow: 0 0 8px #E58CFF;"></span>
+              Expression &amp; Rhythm
+            </span>
+            <h3 class="hobby-title">Dancing</h3>
+            <p class="hobby-desc">
+              Dance is my canvas for fluid movement, coordination, and creative storytelling. It teaches me timing, spatial awareness, and choreographic cohesion—instilling an eye for fluid UI transitions and organic motion design.
+            </p>
+            <div class="hobby-takeaway-box">
+              <span class="takeaway-label">Tech Synergy:</span>
+              <p class="takeaway-text">Spatial reasoning, micro-interaction pacing, and intuitive UI choreography.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobby 2: Singing -->
+        <div class="hobby-card singing">
+          <div class="hobby-media-wrap">
+            <img src="assets/images/hobby-singing.svg" alt="Vocal Pitch & Acoustics" class="hobby-svg">
+          </div>
+          <div class="hobby-body">
+            <span class="hobby-tag-badge">
+              <span class="pulse-dot"></span>
+              Harmony &amp; Precision
+            </span>
+            <h3 class="hobby-title">Singing</h3>
+            <p class="hobby-desc">
+              Singing demands pitch discipline, deep listening, breath control, and vocal resonance. It nurtures active listening, self-confidence on stage, and the patience needed to debug complex technical problems note by note.
+            </p>
+            <div class="hobby-takeaway-box">
+              <span class="takeaway-label">Tech Synergy:</span>
+              <p class="takeaway-text">Deep auditory attention, pitch-perfect precision, and expressive communication.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobby 3: Badminton -->
+        <div class="hobby-card badminton">
+          <div class="hobby-media-wrap">
+            <img src="assets/images/hobby-badminton.svg" alt="Badminton Tactical Court Strategy" class="hobby-svg">
+          </div>
+          <div class="hobby-body">
+            <span class="hobby-tag-badge">
+              <span class="pulse-dot" style="background: #60A5FA; box-shadow: 0 0 8px #60A5FA;"></span>
+              Agility &amp; Reflexes
+            </span>
+            <h3 class="hobby-title">Badminton</h3>
+            <p class="hobby-desc">
+              A high-octane sport of rapid court positioning, split-second anticipation, and explosive rallies. Badminton builds physical stamina, mental resilience, and the agility to adapt rapidly when navigating shifting requirements.
+            </p>
+            <div class="hobby-takeaway-box">
+              <span class="takeaway-label">Tech Synergy:</span>
+              <p class="takeaway-text">Rapid tactical adaptation, focus under pressure, and relentless perseverance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       CONTACT SECTION
+       =================================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">// Transmission Channel</span>
+        <h2 class="section-title">Open for Opportunities &amp; Collaboration</h2>
+        <p class="section-desc">
+          Actively seeking internship opportunities, collaborative coding projects, and engineering mentorship.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Channels & Direct Info -->
+        <div class="contact-info">
+          <div class="contact-highlight-card">
+            <h3 class="contact-title">Connect with Ishika</h3>
+            <p class="contact-subtext">
+              Whether you are a recruiter looking for an enthusiastic first-year intern, a fellow student wanting to collaborate, or someone who loves tech &amp; the arts—I'd love to hear from you.
+            </p>
+
+            <div class="contact-channels">
+              
+              <!-- Email Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-type">Academic Email</span>
+                    <span class="channel-val">ishika.jindal@nst.rishihood.edu.in</span>
+                  </div>
+                </div>
+                <button onclick="copyEmail('ishika.jindal@nst.rishihood.edu.in')" class="channel-action-btn">Copy</button>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-type">LinkedIn</span>
+                    <span class="channel-val">linkedin.com/in/ishika-jindal</span>
+                  </div>
+                </div>
+                <a href="https://linkedin.com/in/ishika-jindal" target="_blank" rel="noopener noreferrer" class="channel-action-btn">View</a>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-type">GitHub</span>
+                    <span class="channel-val">github.com/ishikajindal</span>
+                  </div>
+                </div>
+                <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="channel-action-btn">Explore</a>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-type">Campus Location</span>
+                    <span class="channel-val">NST-RU Campus, Delhi NCR, India</span>
+                  </div>
+                </div>
+                <span class="channel-action-btn" style="cursor: default;">Active</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Message Form -->
+        <div class="contact-form-card">
+          <form id="portfolio-contact-form">
+            <h3 style="font-size: 1.45rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Transmit a Message</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">Direct transmission to Ishika's primary academic inbox.</p>
+
+            <div class="form-group">
+              <label for="form-name" class="form-label">&gt; YOUR_NAME</label>
+              <input type="text" id="form-name" class="form-control" placeholder="e.g. Alex Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">&gt; YOUR_EMAIL</label>
+              <input type="email" id="form-email" class="form-control" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">&gt; TRANSMISSION_PAYLOAD</label>
+              <textarea id="form-message" class="form-control" placeholder="Hi Ishika, I came across your portfolio and would love to discuss an opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Transmit Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <a href="#home" class="nav-brand" style="margin-bottom: 0.25rem;">
+            <div class="brand-icon">IJ</div>
+            <span class="brand-name">Ishika Jindal</span>
+          </a>
+          <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 420px; font-family: var(--font-mono);">
+            First-Year Student @ NST-RU • Aspiring Developer • Tech Enthusiast • Creative Thinker
+          </p>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/ishika-jindal" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <button onclick="copyEmail('ishika.jindal@nst.rishihood.edu.in')" class="social-icon-link" aria-label="Copy Email" style="cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Ishika Jindal • Designed &amp; Engineered with Passion.
+        </div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top-btn">
+          <span>Back to Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       PROJECT DETAIL MODAL
+       =================================================================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <h3 id="modal-title" style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem;"></h3>
+      <p id="modal-tagline" style="font-size: 0.95rem; color: var(--color-cyan); margin-bottom: 1.5rem; font-family: var(--font-mono);"></p>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <span style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.5rem;">Technology Stack</span>
+        <div id="modal-stack" class="project-tech-stack"></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem;">
+        <div style="background: #0D1322; padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(85, 230, 224, 0.15);">
+          <strong style="color: var(--color-vibrant-violet); display: block; margin-bottom: 0.35rem; font-size: 0.85rem; font-family: var(--font-mono);">⚡ Challenge:</strong>
+          <span id="modal-challenge" style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;"></span>
+        </div>
+
+        <div style="background: #0D1322; padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(85, 230, 224, 0.15);">
+          <strong style="color: var(--color-cyan); display: block; margin-bottom: 0.35rem; font-size: 0.85rem; font-family: var(--font-mono);">💡 Solution &amp; Architecture:</strong>
+          <span id="modal-solution" style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;"></span>
+        </div>
+
+        <div style="background: #0D1322; padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(85, 230, 224, 0.15);">
+          <strong style="color: #60A5FA; display: block; margin-bottom: 0.35rem; font-size: 0.85rem; font-family: var(--font-mono);">🌱 Key Takeaway:</strong>
+          <span id="modal-takeaway" style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;"></span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a id="modal-github-link" href="https://github.com/ishikajindal" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>View on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
