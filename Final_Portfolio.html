@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ishika Jindal | Aspiring Developer &amp; Tech Enthusiast | NST-RU</title>
+<meta name="description" content="Portfolio of Ishika Jindal, first-year Computer Science &amp; AI student at NST-RU. Web, App Development, C++, Python, Java and Machine Learning.">
+<meta property="og:title" content="Ishika Jindal | Portfolio">
+<meta property="og:description" content="Aspiring Developer | Tech Enthusiast | Creative Thinker @ NST-RU.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ice:#8fe3ff;--ice2:#3aa8ff;--fire:#ff5a2a;--ember:#ffb347;--void:#02030a}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--void);color:#d6f4ff;font-family:'Space Grotesk',system-ui,sans-serif}
+#track{height:1000vh}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(2,3,10,.75))}
+#ui{position:fixed;inset:0;pointer-events:none}
+.p{position:fixed;left:50%;top:50%;width:min(94vw,900px);padding:clamp(14px,3vw,28px);opacity:0;visibility:hidden;will-change:transform,opacity;border:1px solid rgba(143,227,255,.3);border-radius:14px;background:linear-gradient(135deg,rgba(8,30,60,.55),rgba(60,10,6,.45));backdrop-filter:blur(4px);box-shadow:0 0 40px rgba(58,168,255,.18),inset 0 0 30px rgba(255,90,42,.08)}
+.h{color:#c4f4ff;text-shadow:0 0 8px rgba(120,220,255,.75),-1px 0 rgba(255,70,40,.6),1px 0 rgba(60,160,255,.6);animation:fl 5s infinite}
+.p::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(143,227,255,.07) 0 1px,transparent 1px 3px)}
+@keyframes fl{0%,92%,100%{filter:none}93%{filter:brightness(1.5) hue-rotate(-12deg)}96%{filter:brightness(.8)}}
+.k{font:700 12px 'JetBrains Mono',monospace;color:var(--ember);letter-spacing:.08em;display:block;margin-bottom:6px;text-shadow:0 0 8px rgba(255,90,42,.7)}
+h2{font-size:clamp(22px,4.6vw,40px);line-height:1.1;margin-bottom:clamp(10px,2vw,18px)}
+h3{font-size:clamp(15px,2.2vw,19px);margin:4px 0}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:clamp(8px,1.5vw,12px)}
+.c{border:1px solid rgba(143,227,255,.3);border-radius:10px;padding:clamp(9px,1.6vw,14px);background:rgba(4,12,28,.5)}
+.c small{font:12px 'JetBrains Mono',monospace;color:var(--ember)}
+.c p{font-size:clamp(12px,1.7vw,14.5px);line-height:1.5;color:#a9d9ea;text-shadow:none}
+.c i{display:block;margin-top:6px;font:11px 'JetBrains Mono',monospace;color:var(--ice);font-style:normal}
+#fin{width:min(94vw,820px);max-height:92vh;overflow:auto}
+#fin h1{font-size:clamp(34px,9vw,84px);line-height:1;letter-spacing:.02em;margin-bottom:8px}
+#fin .t{font:clamp(12px,2vw,16px) 'JetBrains Mono',monospace;color:var(--ember);margin-bottom:14px}
+#fin p{line-height:1.6;font-size:clamp(13px,2vw,16px);color:#b9e4f4;text-shadow:none;margin-bottom:12px}
+.b{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.b a,.b button{pointer-events:auto;cursor:pointer;font:700 13px 'JetBrains Mono',monospace;color:#fff;text-decoration:none;padding:10px 14px;border-radius:8px;border:1px solid var(--ice);background:rgba(58,168,255,.18);position:relative;z-index:2}
+.b .f{border-color:var(--fire);background:rgba(255,90,42,.25)}
+.b a:hover,.b button:hover,.b a:focus-visible,.b button:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+#hint{position:fixed;left:0;right:0;bottom:9vh;text-align:center;font:700 clamp(12px,2.4vw,15px) 'JetBrains Mono',monospace;letter-spacing:.3em;pointer-events:none}
+#hint::after{content:"";display:block;width:1px;height:46px;margin:12px auto 0;background:linear-gradient(var(--ice),transparent);animation:dr 1.6s infinite}
+@keyframes dr{0%{transform:scaleY(0);transform-origin:top}60%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(1);transform-origin:bottom;opacity:0}}
+#bar{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--ice2),var(--fire));z-index:5}
+#ctl{position:fixed;right:12px;top:12px;display:flex;gap:8px;z-index:5}
+#ctl button{font:700 12px 'JetBrains Mono',monospace;color:var(--ice);background:rgba(2,3,10,.6);border:1px solid rgba(143,227,255,.4);border-radius:8px;padding:8px 12px;cursor:pointer}
+#ctl button:focus-visible{outline:2px solid var(--ember)}
+.st #track,.st #hint,.st #ctl{display:none}
+.st #ui{position:relative;pointer-events:auto;padding:5vh 0}
+.st .p{position:relative;left:auto;top:auto;transform:none!important;opacity:1!important;visibility:visible!important;margin:5vh auto}
+</style></head>
+<body>
+<div id="track"></div>
+<canvas id="c" aria-hidden="true"></canvas><div id="vig"></div><div id="bar"></div>
+<div id="ctl"><button id="snd" aria-pressed="false">SOUND: OFF</button><button id="skip">SKIP TO CONTENT</button></div>
+<div id="ui"></div>
+<div id="hint" class="h">SCROLL TO IGNITE</div>
+<script>
+/* ===== CONTENT: edit freely ===== */
+const card=(t,tag,d,s)=>`<div class=c><small>${tag}</small><h3>${t}</h3><p>${d}</p><i>${s}</i></div>`;
+const ME={email:'ishika.jindal@nst.rishihood.edu.in',linkedin:'https://linkedin.com/in/ishika-jindal',github:'https://github.com/ishikajindal'};
+/* [start, end, kicker, title, cards] -- start/end = scroll progress 0..1 */
+const PANELS=[
+[.10,.20,'Technical toolbelt','Skills in orbit',
+ card('App Development','Building','Designing mobile screens and managing app state, working toward cross-platform apps.','Mobile UI · State · Components')+
+ card('Web Development','Active focus','Semantic HTML, responsive CSS and vanilla JavaScript, shipping interactive pages like this one.','HTML5 · CSS3 · JavaScript')+
+ card('C++','Core foundation','My problem-solving language: OOP, STL containers, data structures and algorithms.','OOP · STL · DSA')],
+[.20,.29,'Technical toolbelt','More fuel for the engine',
+ card('Python','Proficient','Scripting, OOP and data wrangling with Pandas and NumPy.','Python 3 · Pandas · NumPy')+
+ card('Java','Core foundation','Object-oriented design, collections and exception handling from coursework.','OOP · Collections · File I/O')+
+ card('Machine Learning','Exploring','Early supervised learning with Scikit-Learn: preprocessing, training and model metrics.','Scikit-Learn · Metrics')],
+[.30,.41,'Projects and prototypes','Built along the way',
+ card('AuraCraft','Prototype','Interactive cyber web lab: a playground of UI experiments in the browser.','HTML · CSS · JS')+
+ card('Algoverse','Prototype','Step-by-step animated visualizer for algorithms and data structures.','JavaScript · Canvas')+
+ card('PulseSync','Prototype','Smart wellness companion that helps students balance study, sleep and habits.','App · UI')],
+[.41,.52,'Projects and prototypes','Newest signals',
+ card('NeuroPredict','Prototype','Predictive ML engine, from data preprocessing through to model evaluation.','Python · Scikit-Learn')+
+ card('TaskFlow Pro','Prototype','OOP workspace engine for tasks and projects.','C++ · OOP')+
+ card('Shield AI','New','AI-powered protection project. Full write-up coming soon.','Details to come')],
+[.53,.62,'Education','Where I train',
+ card('B.Tech, Computer Science &amp; AI','First year','Newton School of Technology, Rishihood University (NST-RU), Delhi NCR.','CS fundamentals · AI')],
+[.63,.73,'Beyond technology','The creative half',
+ card('Dancing','Rhythm','Expression and discipline through movement.','')+
+ card('Singing','Voice','Creativity and confidence on stage.','')+
+ card('Badminton','Game','Speed, focus and healthy competition.','')]
+];
+/* ===== SETUP ===== */
+const $=s=>document.querySelector(s),ui=$('#ui'),cv=$('#c'),x=cv.getContext('2d');
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const P=PANELS.map(([a,b,k,t,body])=>{const e=document.createElement('section');e.className='p h';
+ e.innerHTML=`<span class=k>${k}</span><h2>${t}</h2><div class=g>${body}</div>`;ui.append(e);return{a,b,e}});
+const fin=document.createElement('section');fin.id='fin';fin.className='p h';
+fin.innerHTML=`<span class=k>Final reveal</span><h1>Ishika Jindal</h1><div class=t>Aspiring Developer | Tech Enthusiast | Creative Thinker</div>
+<p>First-year Computer Science &amp; AI student at Newton School of Technology, Rishihood University. I care about clean web architecture, strong CS foundations and machine learning, and I balance the logic with dance, singing and badminton.</p>
+<p>Curious by default, creative in how I solve problems, always learning, and structured when it is time to ship.</p>
+<div class=b><button class=f id=cp>COPY EMAIL</button><a href="${ME.linkedin}" target=_blank rel="noopener noreferrer">LINKEDIN</a><a href="${ME.github}" target=_blank rel="noopener noreferrer">GITHUB</a></div>`;
+ui.append(fin);
+$('#cp').onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText(ME.email);e.target.textContent='COPIED';setTimeout(()=>e.target.textContent='COPY EMAIL',1800)};
+if(still)document.body.classList.add('st');
+/* ===== RENDERER ===== */
+const sm=(a,b,v)=>{v=Math.min(1,Math.max(0,(v-a)/(b-a)));return v*v*(3-2*v)};
+const hs=n=>{n=Math.sin(n*127.1+311.7)*43758.5453;return n-Math.floor(n)};
+const S=Array.from({length:800},(_,i)=>({x:hs(i)*2-1,y:hs(i+.3)*2-1,z:hs(i+.7),h:hs(i+.9)}));
+const BD=[.13,.24,.36,.48,.6,.7];
+const path=u=>[.5+.15*Math.sin(u*9)+.05*Math.sin(u*23),.5+.1*Math.cos(u*7)];
+let W,H,q=1,dpr=1,cx,cy;
+function rs(){dpr=Math.min(devicePixelRatio||1,1.5)*q;W=cv.width=innerWidth*dpr;H=cv.height=innerHeight*dpr;cx=W/2;cy=H/2}
+addEventListener('resize',rs);rs();
+function draw(p,t){
+ const m=Math.min(W,H);x.globalCompositeOperation='source-over';x.fillStyle='#02030a';x.fillRect(0,0,W,H);
+ // warp starfield
+ const sk=.015+.1*sm(.05,.7,p)*(1-sm(.74,.78,p)),D=p*18,n=Math.floor(S.length*q);
+ x.lineCap='round';
+ for(let i=0;i<n;i++){const s=S[i],z=(((s.z-D*(.3+s.h*.3))%1)+1)%1+.02,z2=z+sk,f=cx*.35;
+  const a=Math.min(1,(1-z)*1.5);x.strokeStyle=s.h<.5?`rgba(170,225,255,${a})`:`rgba(255,150,100,${a})`;x.lineWidth=(1-z)*2.2*dpr+.4;
+  x.beginPath();x.moveTo(cx+s.x*f/z2,cy+s.y*f/z2*H/W*1.6);x.lineTo(cx+s.x*f/z,cy+s.y*f/z*H/W*1.6);x.stroke()}
+ // cosmic bodies rushing past
+ BD.forEach((b,i)=>{const u=(p-b)/.05;if(u<-1.6||u>1.2)return;const side=i%2?1:-1,r=m*.05*Math.pow(2.8,u+1.4),
+  bx=cx+side*cx*(.25+.7*Math.max(0,u+1)),by=cy+Math.sin(i*2.1)*cy*.35,al=sm(-1.6,-1.2,u)*(1-sm(.3,1.2,u));
+  x.globalAlpha=al;const g=x.createRadialGradient(bx-r*.35,by-r*.35,r*.1,bx,by,r);
+  g.addColorStop(0,side>0?'#ffb08a':'#bfefff');g.addColorStop(.6,side>0?'#7a1d10':'#14507a');g.addColorStop(1,'#020510');
+  x.fillStyle=g;x.beginPath();x.arc(bx,by,r,0,7);x.fill();
+  x.strokeStyle=side>0?'rgba(255,90,42,.7)':'rgba(143,227,255,.7)';x.lineWidth=2*dpr;x.stroke();
+  if(i%3==0){x.beginPath();x.ellipse(bx,by,r*1.7,r*.45,-.4,0,7);x.stroke()}x.globalAlpha=1});
+ // the travelling star: heat bursts, dust trail, lightning
+ const vis=sm(0,.05,p)*(1-sm(.75,.79,p));
+ if(vis>0){x.globalCompositeOperation='lighter';const [fx,fy]=path(p),sx=fx*W,sy=fy*H,r=m*.045*(1+.25*Math.sin(t*8))*(1+p*.8)*vis;
+  for(let i=0;i<Math.floor(70*q);i++){const a=i/70,[tx,ty]=path(p-a*.07),jx=(hs(i*3.1)-.5)*a*W*.07,jy=(hs(i*5.7)-.5)*a*H*.07;
+   x.fillStyle=a<.35?`rgba(255,${90+a*300|0},40,${(1-a)*.5*vis})`:`rgba(143,227,255,${(1-a)*.4*vis})`;
+   x.beginPath();x.arc(tx*W+jx,ty*H+jy,(1-a)*r*.45+1.5*dpr,0,7);x.fill()}
+  for(let i=0;i<40*q;i++){const a=hs(i+9),[tx,ty]=path(p-a*.12);x.fillStyle=`rgba(${i%2?'255,170,120':'170,225,255'},${(1-a)*.7*vis})`;
+   x.fillRect(tx*W+(hs(i*2.3)-.5)*W*.12,ty*H+(hs(i*4.1)-.5)*H*.12,2*dpr,2*dpr)}
+  for(let k=0;k<3;k++){const sd=Math.floor(t*14)+k*91;if(hs(sd)<.35)continue;const [ex,ey]=path(p-.05-k*.025);
+   x.strokeStyle=`rgba(200,240,255,${.5+hs(sd+1)*.5})`;x.shadowColor='#3aa8ff';x.shadowBlur=14*dpr;x.lineWidth=(1+hs(sd+2))*1.5*dpr;x.beginPath();x.moveTo(sx,sy);
+   for(let j=1;j<=8;j++){const u=j/8;x.lineTo(sx+(ex*W-sx)*u*2+(hs(sd+j)-.5)*r*1.6,sy+(ey*H-sy)*u*2+(hs(sd+j+40)-.5)*r*1.6)}x.stroke();x.shadowBlur=0}
+  for(let i=0;i<10;i++){const an=i*.628+t*.5+p*6,ln=r*(2.5+3*hs(i+Math.floor(t*6)));
+   x.strokeStyle=`rgba(255,${90+hs(i)*100|0},40,.45)`;x.lineWidth=r*.1;x.beginPath();x.moveTo(sx,sy);x.lineTo(sx+Math.cos(an)*ln,sy+Math.sin(an)*ln);x.stroke()}
+  const g=x.createRadialGradient(sx,sy,0,sx,sy,r*2.6);g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.25,'rgba(255,233,176,.95)');
+  g.addColorStop(.55,'rgba(255,80,30,.6)');g.addColorStop(1,'rgba(255,60,20,0)');x.fillStyle=g;x.beginPath();x.arc(sx,sy,r*2.6,0,7);x.fill();
+  x.strokeStyle='rgba(143,227,255,.7)';x.lineWidth=2*dpr;x.beginPath();x.arc(sx,sy,r*1.2,0,7);x.stroke()}
+ // supernova: icy blue and fiery red fuse
+ if(p>.76){x.globalCompositeOperation='lighter';const s=sm(.78,.93,p),R=Math.max(W,H)*.8*s*(1+.03*Math.sin(t*2)),off=(1-s)*W*.3;
+  [[-1,'58,168,255'],[1,'255,70,30']].forEach(([d,c])=>{const g=x.createRadialGradient(cx+d*off,cy,0,cx+d*off,cy,R+1);
+   g.addColorStop(0,`rgba(${c},.85)`);g.addColorStop(.5,`rgba(${c},.3)`);g.addColorStop(1,`rgba(${c},0)`);x.fillStyle=g;x.fillRect(0,0,W,H);
+   for(let i=0;i<3;i++){x.strokeStyle=`rgba(${c},${(1-s)*.6+.08})`;x.lineWidth=(3-i)*dpr;x.beginPath();x.arc(cx+d*off,cy,R*(1-i*.2),0,7);x.stroke()}});
+  const g=x.createRadialGradient(cx,cy,0,cx,cy,m*.5*s+1);g.addColorStop(0,`rgba(255,255,255,${.9*(1-sm(.9,1,p)*.6)})`);g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,W,H);
+  const fl=Math.exp(-(((p-.79)/.012)**2));x.fillStyle=`rgba(255,255,255,${fl})`;x.fillRect(0,0,W,H)}
+ x.globalCompositeOperation='source-over'}
+/* ===== SOUND (synthesised, off by default) ===== */
+let ac,gm,ng,nf,on=0,boomed=0;
+function setSound(){if(!ac){ac=new AudioContext();gm=ac.createGain();gm.gain.value=0;gm.connect(ac.destination);
+ [55,82.4,110.5].forEach((f,i)=>{const o=ac.createOscillator(),l=ac.createBiquadFilter();o.type=i?'sine':'sawtooth';o.frequency.value=f;l.type='lowpass';l.frequency.value=300;o.connect(l);l.connect(gm);o.start()});
+ const b=ac.createBuffer(1,ac.sampleRate*2,ac.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
+ const ns=ac.createBufferSource();ns.buffer=b;ns.loop=true;nf=ac.createBiquadFilter();nf.type='bandpass';ng=ac.createGain();ng.gain.value=0;ns.connect(nf);nf.connect(ng);ng.connect(gm);ns.start()}
+ on=!on;ac.resume();gm.gain.setTargetAtTime(on?.4:0,ac.currentTime,.3);$('#snd').textContent='SOUND: '+(on?'ON':'OFF');$('#snd').setAttribute('aria-pressed',on)}
+function boom(){const o=ac.createOscillator(),g=ac.createGain();o.frequency.setValueAtTime(110,ac.currentTime);o.frequency.exponentialRampToValueAtTime(28,ac.currentTime+2.5);
+ g.gain.setValueAtTime(.9,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+3);o.connect(g);g.connect(gm);o.start();o.stop(ac.currentTime+3)}
+$('#snd').onclick=setSound;
+$('#skip').onclick=()=>scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'});
+/* ===== LOOP: scroll drives every frame ===== */
+let tp=0,cp=0,last=performance.now(),acc=0,fr=0;
+const rd=()=>{tp=Math.min(1,Math.max(0,scrollY/(document.documentElement.scrollHeight-innerHeight||1)))};
+addEventListener('scroll',rd,{passive:true});rd();
+function tick(now){const dt=Math.min(.05,(now-last)/1e3);last=now;const prev=cp;cp+=(tp-cp)*Math.min(1,dt*7);
+ acc+=dt;if(++fr==90){if(acc/90>.022&&q>.5){q-=.15;rs()}acc=0;fr=0}
+ draw(cp,now/1e3);
+ P.forEach(o=>{const t=(cp-o.a)/(o.b-o.a),e=o.e.style;if(t<=0||t>=1){e.opacity=0;e.visibility='hidden';return}
+  const a=Math.min(1,t*4)*Math.min(1,(1-t)*4),ea=1-Math.pow(1-Math.min(1,t*3),3);
+  e.visibility='visible';e.opacity=a;e.transform=`translate(-50%,-50%) perspective(900px) rotateX(${60*(1-ea)}deg) scale(${.5+.5*ea+Math.max(0,t-.75)*2.4})`});
+ const fo=sm(.9,.96,cp);fin.style.opacity=fo;fin.style.visibility=fo>0?'visible':'hidden';fin.style.pointerEvents=fo>.6?'auto':'none';
+ fin.style.transform=`translate(-50%,-50%) scale(${.92+.08*fo})`;
+ $('#hint').style.opacity=1-sm(0,.03,cp);$('#bar').style.width=cp*100+'%';
+ if(on){ng.gain.setTargetAtTime(Math.min(.5,Math.abs(cp-prev)*160),ac.currentTime,.1);nf.frequency.value=400+cp*3000;
+  if(cp>.79&&!boomed){boom();boomed=1}if(cp<.7)boomed=0}
+ requestAnimationFrame(tick)}
+if(still){cp=.95;draw(cp,0)}else requestAnimationFrame(tick);
+</script></body></html>
